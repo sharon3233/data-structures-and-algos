@@ -4,7 +4,7 @@
 
 * Fork n' Clone this Repo
 * `cd` into the lesson's directory (as directed by your Coach)
-* TDD your way to completion 
+* Run `npm t` and TDD your way to completion 
 
 ### Notes
 
