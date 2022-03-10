@@ -1,5 +1,5 @@
 {
-  "name": "fib",
+  "name": "countdown",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jest": "^27.5.0"
+    "jest": "^27.5.1"
   }
 }
