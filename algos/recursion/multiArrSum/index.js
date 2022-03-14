@@ -1,6 +1,7 @@
+//Bonus 
 function multiDimSum(arr) {
    
-        var sum = 0;
+        let sum = 0;
         // iterate array using forEach, better to use for loop since it have higher performance
         arr.forEach(function(v) {
           // checking array element is an array

@@ -36,11 +36,11 @@ describe('isPermutationPalendrome function', () => {
 		What does that tell you?
 	*/
 
-	it('returns boolean if any permutation of a string is a palendrome!!', () => {
-		expect(isPermutationPalendrome(str1)).toBe(true);
-		expect(isPermutationPalendrome(str2)).toBe(false);
-		expect(isPermutationPalendrome(str4)).toBe(true);
-		expect(isPermutationPalendrome(str5)).toBe(true);
-	});
+	// it('returns boolean if any permutation of a string is a palendrome!!', () => {
+	// 	expect(isPermutationPalendrome(str1)).toBe(true);
+	// 	expect(isPermutationPalendrome(str2)).toBe(false);
+	// 	expect(isPermutationPalendrome(str4)).toBe(true);
+	// 	expect(isPermutationPalendrome(str5)).toBe(true);
+	// });
 
 });
