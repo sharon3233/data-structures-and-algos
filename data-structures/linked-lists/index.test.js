@@ -10,61 +10,61 @@ describe("Linked List data structure", () => {
 	describe("Node data structure", () => {
 		let node = new Node('banana')
 
-		xit('has a value', () => {
+		it('has a value', () => {
 			expect(node.value).toBe("banana");
 		});
 
-		xit('has a property of previous, set to null', () => {
+		it('has a property of previous, set to null', () => {
 			expect(node.previous).toBe(null)
 		});
 
-		xit('has a property of next, set to null', () => {
+		it('has a property of next, set to null', () => {
 			expect(node.next).toBe(null)
 		});
 	});
 
 	describe("Linked Lists implementation" , () => {
 
-		xit('should have a head property, set to null', () => {
+		it('should have a head property, set to null', () => {
 			expect(ll.head).toBe(null);
 		});
 
-		xit('should have a tail property, set to null', () => {
-			expect(ll.tail).toBe(null);
+		it('should have a size property, set to null', () => {
+			expect(ll.size).toBe(null);
 		});
 
-		describe('addToTail method', () => {
+		describe('addTosize method', () => {
 
-			xit("has a addToTail method", () => {
-				expect(typeof ll.addToTail).toBe('function');
+			it("has a addTosize method", () => {
+				expect(typeof ll.addTosize).toBe('function');
 			});
 
-			xit("adds a node to tail of linked list", () => {
+			it("adds a node to size of linked list", () => {
 				let newNode = new Node('apple')
-				ll.addToTail(newNode)
+				ll.addTosize(newNode)
 
-				expect(ll.tail instanceof Node ).toBe(true);
-				expect(ll.tail.value).toBe('apple');
+				expect(ll.size instanceof Node ).toBe(true);
+				expect(ll.size.value).toBe('apple');
 			});
 
-			xit("can add multiple nodes to tail without overwriting previous nodes", () => {
+			it("can add multiple nodes to size without overwriting previous nodes", () => {
 				let banana = new Node('banana');
 				let apple = new Node('apple');
 				let mango = new Node('mango');
 
-				ll.addToTail(banana);
-				ll.addToTail(apple);
-				ll.addToTail(mango);
+				ll.addTosize(banana);
+				ll.addTosize(apple);
+				ll.addTosize(mango);
 
-				expect(ll.tail.value).toBe('mango');
-				expect(ll.tail.previous.value).toBe('apple');
+				expect(ll.size.value).toBe('mango');
+				expect(ll.size.previous.value).toBe('apple');
 			});
 
-			xit('if a linked list is created with only one node, that node is both the Head and Tail', () => {
+			it('if a linked list is created with only one node, that node is both the Head and size', () => {
 				let banana = new Node("banana");
-				ll.addToTail(banana);
+				ll.addTosize(banana);
 
-				expect(ll.tail.value).toBe('banana');
+				expect(ll.size.value).toBe('banana');
 				expect(ll.head.value).toBe('banana');
 			})
 
@@ -73,17 +73,17 @@ describe("Linked List data structure", () => {
 
 		describe('addToHead method', () => {
 			
-			xit('has addToHead method', () => {
+			it('has addToHead method', () => {
 				expect(typeof ll.addToHead).toBe('function');
 			})
 			
-			xit('should use `Node` class to add nodes', () => {
+			it('should use `Node` class to add nodes', () => {
 				let banana = new Node('banana')
 				ll.addToHead(banana)
 				expect(ll.head instanceof Node).toBe(true)
 			})
 
-		    xit('should be able to add to head without removing or overwriting existing nodes', () => {
+		    it('should be able to add to head without removing or overwriting existing nodes', () => {
 		        let banana = new Node('banana');
 		        let mango = new Node('mango');
 
@@ -95,82 +95,82 @@ describe("Linked List data structure", () => {
 		      	expect(ll.head.next.value).toBe('banana')
 		    })
 
-		    xit('if the linked list consists of a single node after adding to head, that node should be both the head and the tail', () => {
+		    it('if the linked list consists of a single node after adding to head, that node should be both the head and the size', () => {
 		        let apple = new Node('apple');
 		        ll.addToHead(apple);
 
 		        expect(ll.head.value).toBe('apple')
-		        expect(ll.tail.value).toBe('apple')
+		        expect(ll.size.value).toBe('apple')
 		    });
 		});
 
-		describe('removeTail method', () => {
+		describe('removesize method', () => {
 
-			xit('has a removeTail method', () => {
-				expect(typeof ll.removeTail).toBe('function');
+			it('has a removesize method', () => {
+				expect(typeof ll.removesize).toBe('function');
 			})
 			
-			xit('should return the `value` of the removed tail node', () => {
+			it('should return the `value` of the removed size node', () => {
 				let banana = new Node('banana');
 		        let mango = new Node('mango');
 
-				ll.addToTail(banana)
-				ll.addToTail(mango)
+				ll.addTosize(banana)
+				ll.addTosize(mango)
 
-				expect(ll.removeTail().value).toBe('mango')
-				expect(ll.removeTail().value).toBe('banana')
+				expect(ll.removesize().value).toBe('mango')
+				expect(ll.removesize().value).toBe('banana')
 			})
 
-			xit('should reassign the `tail` after the current tail node is removed', () => {
+			it('should reassign the `size` after the current size node is removed', () => {
 				let banana = new Node('banana');
 		        let mango = new Node('mango');
 		        let apple = new Node('apple');
 
-				ll.addToTail(banana)
-				ll.addToTail(mango)
-				ll.addToTail(apple)
+				ll.addTosize(banana)
+				ll.addTosize(mango)
+				ll.addTosize(apple)
 
-				ll.removeTail() // remove apple
-				expect(ll.tail.value).toBe('mango')
+				ll.removesize() // remove apple
+				expect(ll.size.value).toBe('mango')
 
-				ll.removeTail() // remove mango
-				expect(ll.tail.value).toBe('banana')
+				ll.removesize() // remove mango
+				expect(ll.size.value).toBe('banana')
 			})
 
-			xit('should make sure the `next` of any tail is null', () => {
+			it('should make sure the `next` of any size is null', () => {
 				let banana = new Node('banana');
 				let mango = new Node('mango');
 		        let apple = new Node('apple');
 
-				ll.addToTail(banana)
-				ll.addToTail(mango)
-				ll.addToTail(apple)
+				ll.addTosize(banana)
+				ll.addTosize(mango)
+				ll.addTosize(apple)
 
-				ll.removeTail()
-				expect(ll.tail.value).toBe('mango')
-				expect(ll.tail.next).toBe(null)
+				ll.removesize()
+				expect(ll.size.value).toBe('mango')
+				expect(ll.size.next).toBe(null)
 
-				ll.removeTail()
-				expect(ll.tail.value).toBe('banana')
-				expect(ll.tail.next).toBe(null)
+				ll.removesize()
+				expect(ll.size.value).toBe('banana')
+				expect(ll.size.next).toBe(null)
 			})
 
-			xit('returns null if there is no tail to remove (ie: the list is empty, or all nodes have been removed)', () => {
-				expect(ll.removeTail()).toBe(null)
+			it('returns null if there is no size to remove (ie: the list is empty, or all nodes have been removed)', () => {
+				expect(ll.removesize()).toBe(null)
 
 				let banana = new Node('banana');
 				let mango = new Node('mango');
 		        let apple = new Node('apple');
 
-				ll.addToTail(banana)
-				ll.addToTail(mango)
-				ll.addToTail(apple)
+				ll.addTosize(banana)
+				ll.addTosize(mango)
+				ll.addTosize(apple)
 
-				ll.removeTail()
-				ll.removeTail()
-				ll.removeTail()
+				ll.removesize()
+				ll.removesize()
+				ll.removesize()
 				
-				expect(ll.removeTail()).toBe(null)
+				expect(ll.removesize()).toBe(null)
 			})
 		});
 
