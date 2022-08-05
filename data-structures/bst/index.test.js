@@ -5,18 +5,18 @@ describe('BinarySearchTree', () => {
   const testValues = [3, 13, 1, -9, 62, -4, 0, 22, 2, 8];
 
 
-  // Before each spec, create a new BST with 20 at the root
+  // Before each spec, create a new BST with 5 at the root
   beforeEach(() => {
     bst = new BinarySearchTree(5)
   })
 
-  describe('inital bst', () => {
+  describe('initial bst', () => {
   	
-  	xit('inital tree should take a value argument in its constructor', () => {
+  	xit('initial tree should take a value argument in its constructor', () => {
   		expect(bst.value).toBe(5);
   	});
 
-  	xit('inital tree should have left and right values set to null', () => {
+  	xit('initial tree should have left and right values set to null', () => {
   		expect(bst.left).toBe(null);
   		expect(bst.right).toBe(null);
   	});
