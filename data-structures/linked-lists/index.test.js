@@ -110,7 +110,7 @@ describe("Linked List data structure", () => {
 				expect(typeof ll.removeTail).toBe('function');
 			})
 			
-			xit('should return the `value` of the removed tail node', () => {
+			xit('should return the removed tail node', () => {
 				let banana = new Node('banana');
 		        let mango = new Node('mango');
 
